@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>350 Grove Street | Acres Realty Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0a; --charcoal:#1c1c1c; --white:#f9f7f4;
+  --gold:#c9a96e; --light:#aaa89e; --border:rgba(201,169,110,.24);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif}
+a{color:inherit}
+.header{padding:24px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:center}
+.logo{max-width:360px;width:86%}
+.hero{
+ min-height:54vh;display:flex;align-items:flex-end;padding:54px 7vw;
+ background:linear-gradient(to top,rgba(10,10,10,.98),rgba(10,10,10,.1)),
+ url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=88') center/cover no-repeat;
+}
+.eyebrow{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:12px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,9vw,96px);font-weight:300;margin:8px 0}
+.sub{color:var(--light);font-size:17px}
+.content{max-width:1100px;margin:auto;padding:54px 20px 90px}
+.grid{display:grid;grid-template-columns:1.3fr .7fr;gap:34px}
+.panel{background:var(--charcoal);border:1px solid var(--border);padding:32px}
+.panel h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;margin-top:0}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.feature{border:1px solid var(--border);padding:18px}
+.feature strong{display:block;color:var(--gold);margin-bottom:6px}
+.btn{display:inline-block;background:var(--gold);color:#000;text-decoration:none;padding:14px 20px;margin:6px 6px 0 0;font-weight:500}
+.small{color:var(--light);line-height:1.7}
+.gate{
+ position:fixed;inset:0;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;
+ padding:20px;z-index:9999;
+}
+.gate-card{width:min(540px,100%);background:var(--charcoal);border:1px solid var(--gold);padding:32px;max-height:95vh;overflow:auto}
+.gate-card h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;margin:0 0 10px}
+label{display:block;margin:14px 0 6px;color:var(--light);font-size:13px}
+input,select{width:100%;padding:14px;background:#111;border:1px solid var(--border);color:var(--white);font:inherit}
+button{width:100%;margin-top:20px;padding:15px;background:var(--gold);border:0;color:#000;font-weight:600;cursor:pointer}
+button:disabled{opacity:.65;cursor:wait}
+.privacy,.message{font-size:11px;color:var(--light);line-height:1.5;margin-top:12px}
+.message{font-size:13px}
+.error{color:#ffb4b4}
+.hidden{display:none}
+@media(max-width:800px){
+ .grid{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <a href="../scan/"><img src="../assets/ARG-horizontal-transparent.png" alt="Acres Realty Group" class="logo"></a>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">Commercial • For Lease</div>
+    <h1>350 Grove Street</h1>
+    <div class="sub">Multiple layouts and various square footages available</div>
+  </div>
+</section>
+
+<main class="content">
+  <div class="grid">
+    <section class="panel">
+      <h2>Property Overview</h2>
+      <p class="small">
+        This page is ready for the final listing description, property address details,
+        photos, available unit sizes, lease rate, zoning, parking information, and brochure.
+      </p>
+
+      <div class="features">
+        <div class="feature"><strong>Availability</strong>Multiple layouts available</div>
+        <div class="feature"><strong>Square Footage</strong>Various sizes available</div>
+        <div class="feature"><strong>Use</strong>Commercial leasing opportunity</div>
+        <div class="feature"><strong>Pricing</strong>Call for details</div>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <h2>Request a Tour</h2>
+      <p class="small">Contact Akash Chhabra for current availability, pricing, and tours.</p>
+      <a class="btn" href="tel:18482504189">Call Now</a>
+      <a class="btn" href="mailto:1@acresrealtors.com?subject=350%20Grove%20Street%20Inquiry">Email</a>
+      <p class="small" style="margin-top:20px">
+        848-250-4189<br>
+        1@acresrealtors.com<br>
+        www.acresrealtors.com
+      </p>
+    </aside>
+  </div>
+</main>
+
+<div class="gate" id="leadGate">
+  <div class="gate-card">
+    <div class="eyebrow">Property Access</div>
+    <h2>View 350 Grove Street</h2>
+    <p class="small">Enter your contact information to continue to the property details.</p>
+
+    <form id="leadForm">
+      <input type="hidden" id="property" name="property" value="350 Grove Street">
+      <input type="hidden" id="property_slug" name="property_slug" value="350_Grove">
+      <input type="hidden" id="source" name="source" value="QR Scan Landing Page">
+
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+
+      <label for="phone">Phone number</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+
+      <label for="looking_to">I'm looking to</label>
+      <select id="looking_to" name="looking_to" required>
+        <option value="" selected disabled>Select one</option>
+        <option value="Buy">Buy</option>
+        <option value="Sell">Sell</option>
+        <option value="Lease">Lease</option>
+      </select>
+
+      <button id="submitButton" type="submit">Continue to Property</button>
+      <div class="message" id="formMessage" aria-live="polite"></div>
+      <div class="privacy">
+        By continuing, the visitor agrees that Acres Realty Group may contact them regarding this property.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+/*
+  Replace the placeholder below with your deployed Google Apps Script Web App URL.
+  Example:
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/ABC123.../exec';
+*/
+const GOOGLE_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+const gate = document.getElementById('leadGate');
+const form = document.getElementById('leadForm');
+const button = document.getElementById('submitButton');
+const message = document.getElementById('formMessage');
+
+if (sessionStorage.getItem('arg_350_grove_access') === 'granted') {
+  gate.classList.add('hidden');
+}
+
+form.addEventListener('submit', async function(event) {
+  event.preventDefault();
+  message.textContent = '';
+
+  if (!GOOGLE_SCRIPT_URL.startsWith('https://script.google.com/')) {
+    message.textContent = 'Google Sheets connection has not been configured yet.';
+    message.className = 'message error';
+    return;
+  }
+
+  button.disabled = true;
+  button.textContent = 'Submitting...';
+
+  const payload = {
+    timestamp: new Date().toISOString(),
+    property: document.getElementById('property').value,
+    property_slug: document.getElementById('property_slug').value,
+    source: document.getElementById('source').value,
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    looking_to: document.getElementById('looking_to').value,
+    page_url: window.location.href
+  };
+
+  try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(payload)
+    });
+
+    sessionStorage.setItem('arg_350_grove_access', 'granted');
+    gate.classList.add('hidden');
+  } catch (error) {
+    message.textContent = 'We could not submit your information. Please try again.';
+    message.className = 'message error';
+    button.disabled = false;
+    button.textContent = 'Continue to Property';
+  }
+});
+</script>
+</body>
+</html>
